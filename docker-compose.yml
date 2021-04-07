@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+
+    my-scrap:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      volumes : 
+        - "scrap"
+      networks : 
+        - "my-network"
+
+networks :
+    my-network:
+        driver: bridge
